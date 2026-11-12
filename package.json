@@ -1,0 +1,128 @@
+{
+  "name": "piko-ai",
+  "productName": "PIKO AI",
+  "version": "1.5.3",
+  "description": "PIKO AI — an AI-powered desktop development environment with learning, memory, web intelligence and defensive security.",
+  "author": {
+    "name": "PIKO AI",
+    "email": "support@piko.ai"
+  },
+  "license": "MIT",
+  "private": true,
+  "main": "dist-electron/main.js",
+  "scripts": {
+    "dev": "concurrently -k \"npm:dev:renderer\" \"npm:dev:electron\"",
+    "dev:renderer": "vite --port 5199",
+    "dev:electron": "wait-on tcp:5199 && npm run build:main && cross-env PIKO_DEV=1 electron .",
+    "build:main": "node scripts/build-main.mjs",
+    "build:renderer": "vite build",
+    "build": "npm run build:main && npm run build:renderer",
+    "icon": "node scripts/generate-icon.mjs",
+    "start": "npm run build && electron .",
+    "smoke": "npm run build && electron . --piko-smoke",
+    "ui-smoke": "npm run build && electron . --piko-ui-smoke",
+    "dist": "npm run icon && npm run build && electron-builder --win nsis portable",
+    "dist:nsis": "npm run icon && npm run build && electron-builder --win nsis",
+    "test:core": "node scripts/test-core.mjs",
+    "typecheck": "tsc --noEmit && tsc -p tsconfig.electron.json --noEmit",
+    "ext:vsix": "node scripts/package-extension.mjs"
+  },
+  "dependencies": {
+    "@monaco-editor/react": "^4.7.0",
+    "@xterm/addon-fit": "^0.10.0",
+    "@xterm/xterm": "^5.5.0",
+    "cheerio": "^1.0.0",
+    "diff": "^7.0.0",
+    "dompurify": "^3.2.0",
+    "electron-updater": "^6.6.2",
+    "lucide-react": "^0.468.0",
+    "marked": "^14.1.0",
+    "monaco-editor": "^0.52.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "semver": "^7.6.0",
+    "sql.js": "^1.12.0",
+    "unzipper": "^0.12.5",
+    "zustand": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/diff": "^7.0.0",
+    "@types/node": "^22.10.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@types/sql.js": "^1.4.9",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^9.1.0",
+    "cross-env": "^7.0.3",
+    "electron": "^45.0.0",
+    "electron-builder": "^26.0.0",
+    "esbuild": "^0.24.0",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.0",
+    "wait-on": "^8.0.1"
+  },
+  "build": {
+    "appId": "ai.piko.desktop",
+    "productName": "PIKO AI",
+    "copyright": "Copyright © 2026 PIKO AI",
+    "asar": true,
+    "asarUnpack": [
+      "node_modules/sql.js/dist/**"
+    ],
+    "directories": {
+      "output": "release",
+      "buildResources": "build"
+    },
+    "files": [
+      "dist/**/*",
+      "dist-electron/**/*",
+      "wallpaper/**/*",
+      "build/icon.png",
+      "build/icon.ico",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "artifactName": "setup_piko.${ext}",
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "PIKO AI",
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico",
+      "installerHeaderIcon": "build/icon.ico",
+      "runAfterFinish": true,
+      "deleteAppDataOnUninstall": false
+    },
+    "portable": {
+      "artifactName": "PIKO-AI-Portable-${version}-${arch}.${ext}"
+    },
+    "publish": [
+      {
+        "provider": "generic",
+        "url": "https://updates.piko.ai/desktop"
+      }
+    ]
+  }
+}

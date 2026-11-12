@@ -1,0 +1,82 @@
+{
+  "name": "piko-sidebar",
+  "displayName": "PIKO AI Sidebar",
+  "description": "A native-looking PIKO AI sidebar: image cards with titles and descriptions in the VS Code Activity Bar.",
+  "version": "1.0.0",
+  "publisher": "piko-ai",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "piko",
+    "sidebar",
+    "webview",
+    "ollama",
+    "agents"
+  ],
+  "activationEvents": [
+    "onView:pikoSidebar.items"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "pikoSidebar",
+          "title": "PIKO AI",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "pikoSidebar": [
+        {
+          "type": "webview",
+          "id": "pikoSidebar.items",
+          "name": "PIKO Feed",
+          "contextualTitle": "PIKO AI"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "pikoSidebar.refresh",
+        "title": "PIKO: Refresh sidebar",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "pikoSidebar.openSidebar",
+        "title": "PIKO: Open PIKO AI sidebar",
+        "icon": "$(sidebar-left)"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "pikoSidebar.refresh",
+          "when": "view == pikoSidebar.items",
+          "group": "navigation"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "PIKO AI Sidebar",
+      "properties": {
+        "pikoSidebar.maxItems": {
+          "type": "number",
+          "default": 12,
+          "minimum": 1,
+          "maximum": 100,
+          "description": "Maximum number of cards rendered in the PIKO AI sidebar list."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "package": "npx --yes @vscode/vsce package"
+  }
+}

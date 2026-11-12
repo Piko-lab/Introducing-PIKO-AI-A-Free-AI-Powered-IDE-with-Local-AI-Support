@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-electron/
+release/
+outexe/
+
+# Separate repositories — the website lives in black2000a/web-site
+web_site/
+
+# Large binaries — publish installers through GitHub Releases, not git
+*.exe
+*.rar
+*.7z
+*.zip
+*.blockmap
+
+# Local data and secrets
+.env
+.env.*
+*.log
+npm-debug.log*
+
+# Local tool metadata
+.freebuff/
+
+# OS files
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
