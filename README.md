@@ -9,13 +9,13 @@
 A real coding agent inside a real IDE — files, terminal, git, web research,
 durable memory and defensive security. Local-first, provider-agnostic, no placeholders.
 
-[![Version](https://img.shields.io/badge/version-1.5.3-7C3AED?style=flat-square)](https://github.com/black2000a/PIKO-AI-A-APP-DOWNLOAD)
+[![Version](https://img.shields.io/badge/version-1.5.3-7C3AED?style=flat-square)](https://github.com/Piko-lab/PIKO-AI-A-APP-DOWNLOAD)
 [![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11%20x64-0078D4?style=flat-square)](#requirements)
 [![License](https://img.shields.io/badge/license-MIT-22C55E?style=flat-square)](LICENSE)
 [![Electron](https://img.shields.io/badge/Electron-45-47848F?style=flat-square)](https://www.electronjs.org/)
 [![Ollama](https://img.shields.io/badge/Ollama-local%20models-000000?style=flat-square)](https://ollama.com)
 
-[Download](https://github.com/black2000a/PIKO-AI-A-APP-DOWNLOAD) · [Features](#features) · [Documentation](#documentation) · [Source](https://github.com/black2000a/Introducing-PIKO-AI-A-Free-AI-Powered-IDE-with-Local-AI-Support) · [Website](https://black2000a.github.io/web-site/)
+[Download](https://github.com/Piko-lab/PIKO-AI-A-APP-DOWNLOAD) · [Features](#features) · [Documentation](#documentation) · [Source](https://github.com/Piko-lab/Introducing-PIKO-AI-A-Free-AI-Powered-IDE-with-Local-AI-Support) · [Website](https://piko-lab.github.io/web-site/)
 
 </div>
 
@@ -100,7 +100,7 @@ link, the **PIKO AI × GitHub × Ollama** strip and the developer message transl
 
 ## Install
 
-Download the latest build from the [**PIKO AI download repository**](https://github.com/black2000a/PIKO-AI-A-APP-DOWNLOAD).
+Download the latest build from the [**PIKO AI download repository**](https://github.com/Piko-lab/PIKO-AI-A-APP-DOWNLOAD).
 
 | Build | File | Size | Notes |
 | --- | --- | --- | --- |
@@ -136,7 +136,7 @@ settings by default.
 Requirements: Node.js 20+ (Node 24 tested), npm 10+, Git, Windows 10/11 x64.
 
 ```powershell
-git clone https://github.com/black2000a/Introducing-PIKO-AI-A-Free-AI-Powered-IDE-with-Local-AI-Support.git piko-ai
+git clone https://github.com/Piko-lab/Introducing-PIKO-AI-A-Free-AI-Powered-IDE-with-Local-AI-Support.git piko-ai
 cd piko-ai
 npm install
 npm run build

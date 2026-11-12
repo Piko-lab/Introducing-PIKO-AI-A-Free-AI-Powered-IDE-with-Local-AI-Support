@@ -2,7 +2,7 @@
 
 ## From the installer
 
-1. Download `setup_piko.exe` from the [PIKO AI download repository](https://github.com/black2000a/PIKO-AI-A-APP-DOWNLOAD) (or the `release/` folder in a local build).
+1. Download `setup_piko.exe` from the [PIKO AI download repository](https://github.com/Piko-lab/PIKO-AI-A-APP-DOWNLOAD) (or the `release/` folder in a local build).
 2. Run the installer and choose an installation folder if you do not want the default.
 3. The wizard creates a Start menu entry and a desktop shortcut named **PIKO AI**.
 4. Launch PIKO AI from the shortcut. The first launch initializes the local database.

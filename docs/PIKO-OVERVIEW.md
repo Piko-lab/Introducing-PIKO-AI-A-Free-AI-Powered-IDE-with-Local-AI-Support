@@ -8,9 +8,9 @@ Everything about PIKO AI in one document: what it is, what it does, how it is bu
 - **App ID:** `ai.piko.desktop`
 - **Platform:** Windows 10/11 x64
 - **Website source:** `web_site/`
-- **Source code:** https://github.com/black2000a/Introducing-PIKO-AI-A-Free-AI-Powered-IDE-with-Local-AI-Support
-- **Download:** https://github.com/black2000a/PIKO-AI-A-APP-DOWNLOAD
-- **Website:** https://github.com/black2000a/web-site
+- **Source code:** https://github.com/Piko-lab/Introducing-PIKO-AI-A-Free-AI-Powered-IDE-with-Local-AI-Support
+- **Download:** https://github.com/Piko-lab/PIKO-AI-A-APP-DOWNLOAD
+- **Website:** https://github.com/Piko-lab/web-site
 - **Local model runtime:** https://ollama.com
 
 ---
@@ -357,8 +357,8 @@ Unsigned builds may trigger SmartScreen; signing uses `CSC_LINK` / `CSC_KEY_PASS
 
 - White background, black text, PIKO violet accents
 - Real IDE screenshot in the download section
-- **Download app** → https://github.com/black2000a/PIKO-AI-A-APP-DOWNLOAD
-- **Source code** → https://github.com/black2000a/Introducing-PIKO-AI-A-Free-AI-Powered-IDE-with-Local-AI-Support
+- **Download app** → https://github.com/Piko-lab/PIKO-AI-A-APP-DOWNLOAD
+- **Source code** → https://github.com/Piko-lab/Introducing-PIKO-AI-A-Free-AI-Powered-IDE-with-Local-AI-Support
 - **PIKO AI × GitHub × Ollama** strip
 - Developer section: PIKO logo avatar, transparent card, 20 translated developer messages, English by default (Arabic and other RTL languages still supported)
 - Developer contacts: Discord `taha29dev` and mail `tahazitoni123@gmail.com`, wired through `CONFIG`
@@ -370,9 +370,9 @@ Key `CONFIG` values in `web_site/app.js`:
 
 ```js
 version:        '1.5.3'
-installer:      'https://github.com/black2000a/PIKO-AI-A-APP-DOWNLOAD'
-portable:       'https://github.com/black2000a/PIKO-AI-A-APP-DOWNLOAD/releases/latest/download/PIKO-AI-Portable-1.5.3-x64.exe'
-github:         'https://github.com/black2000a/Introducing-PIKO-AI-A-Free-AI-Powered-IDE-with-Local-AI-Support'
+installer:      'https://github.com/Piko-lab/PIKO-AI-A-APP-DOWNLOAD'
+portable:       'https://github.com/Piko-lab/PIKO-AI-A-APP-DOWNLOAD/releases/latest/download/PIKO-AI-Portable-1.5.3-x64.exe'
+github:         'https://github.com/Piko-lab/Introducing-PIKO-AI-A-Free-AI-Powered-IDE-with-Local-AI-Support'
 ollama:         'https://ollama.com'
 discord:        'https://discord.com/users/1569794818396397741'
 discordHandle:  'taha29dev'
